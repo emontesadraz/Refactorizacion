@@ -2,11 +2,11 @@ public class Main {
     /**
      * metodo para devolver la puntuacion de tenis
      */
-    public static String getScore(int pointsPlayer1, int m_score2) {
+    public static String getScore(int pointsPlayer1, int pointsPlayer2) {
         String score = "";
         int tempScore=0;
 
-        if (pointsPlayer1 == m_score2) {
+        if (pointsPlayer1 == pointsPlayer2) {
             switch (pointsPlayer1)
             {
                 case 0:
@@ -27,9 +27,9 @@ public class Main {
 
             }
         }
-        else if (pointsPlayer1 >=4 || m_score2 >=4)
+        else if (pointsPlayer1 >=4 || pointsPlayer2 >=4)
         {
-            int minusResult = pointsPlayer1-m_score2;
+            int minusResult = pointsPlayer1-pointsPlayer2;
             if (minusResult==1) score ="Advantage player1";
             else if (minusResult ==-1) score ="Advantage player2";
             else if (minusResult>=2) score = "Win for player1";
@@ -40,7 +40,7 @@ public class Main {
             for (int i=1; i<3; i++)
             {
                 if (i==1) tempScore = pointsPlayer1;
-                else { score+="-"; tempScore = m_score2;}
+                else { score+="-"; tempScore = pointsPlayer2;}
                 switch(tempScore)
                 {
                     case 0:
