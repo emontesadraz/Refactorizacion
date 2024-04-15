@@ -28,6 +28,13 @@ public class Main {
     return score;
     }
 
+    /**
+     * Este metodo calcula y devuelve la puntuacion cuando los dos jugadores tienen 4 o mas puntos
+     *
+     * @param pointsPlayer1 La puntuacion del primer jugador
+     * @param pointsPlayer2 La puntuacion del segundo jugador
+     * @return La puntuacion del juego como un String
+     */
     private static String advantagePoints(int pointsPlayer1, int pointsPlayer2) {
         String score;
         int advantagePlayer = pointsPlayer1 - pointsPlayer2;
@@ -39,11 +46,11 @@ public class Main {
     }
 
     /**
-     * Este metodo calcula y devuelve la puntuacion cuando los dos jugadores tienen 4 o mas puntos
+     * Este metodo calcula y devuelve la puntuacion cuando ninguno de los dos jugadores ha llegado a 4 puntos y los puntos no son iguales
      *
-     * @param pointsPlayer1
-     * @param pointsPlayer2
-     * @param score
+     * @param pointsPlayer1 La puntuacion del primer jugador
+     * @param pointsPlayer2 La puntuacion del segundo jugador
+     * @param score La puntuacion actual del juego
      * @return La puntuacion del juego como un String
      */
     private static String drawPuntuation(int pointsPlayer1, int pointsPlayer2, String score) {
@@ -72,9 +79,9 @@ public class Main {
     }
 
     /**
-     * Este metodo recibe y devuelve la puntuacion de el jugador ganador
+     * Este devuelve la puntuacion de los jugadores cuando estan empatados
      *
-     * @param pointsPlayer1
+     * @param pointsPlayer1 La puntuacion del primer jugador
      * @return La puntuacion del juego como un String
      */
     private static String pointName(int pointsPlayer1) {
