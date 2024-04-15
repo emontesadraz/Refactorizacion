@@ -1,3 +1,5 @@
+package com.tenis;
+
 /**
  * Clase que contiene métodos matemáticos
  */
