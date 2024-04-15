@@ -18,11 +18,7 @@ public class Main {
         }
         else if (pointsPlayer1 >=4 || pointsPlayer2 >=4)
         {
-            int advantagePlayer = pointsPlayer1-pointsPlayer2;
-            if (advantagePlayer==1) score ="Advantage player1";
-            else if (advantagePlayer ==-1) score ="Advantage player2";
-            else if (advantagePlayer>=2) score = "Win for player1";
-            else score ="Win for player2";
+            score = advantagePoints(pointsPlayer1, pointsPlayer2);
         }
         else
         {
@@ -32,8 +28,18 @@ public class Main {
     return score;
     }
 
+    private static String advantagePoints(int pointsPlayer1, int pointsPlayer2) {
+        String score;
+        int advantagePlayer = pointsPlayer1 - pointsPlayer2;
+        if (advantagePlayer==1) score ="Advantage player1";
+        else if (advantagePlayer ==-1) score ="Advantage player2";
+        else if (advantagePlayer>=2) score = "Win for player1";
+        else score ="Win for player2";
+        return score;
+    }
+
     /**
-     * Este metodo calcula y devuelve la puntuacion cuando los dos jugadores han empatado
+     * Este metodo calcula y devuelve la puntuacion cuando los dos jugadores tienen 4 o mas puntos
      *
      * @param pointsPlayer1
      * @param pointsPlayer2
