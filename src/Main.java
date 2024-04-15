@@ -4,7 +4,7 @@ public class Main {
      */
     public static String getScore(int pointsPlayer1, int pointsPlayer2) {
         String score = "";
-        int tempScore=0;
+        int auxScore=0;
 
         if (pointsPlayer1 == pointsPlayer2) {
             switch (pointsPlayer1)
@@ -29,19 +29,19 @@ public class Main {
         }
         else if (pointsPlayer1 >=4 || pointsPlayer2 >=4)
         {
-            int advantadgePlayer = pointsPlayer1-pointsPlayer2;
-            if (advantadgePlayer==1) score ="Advantage player1";
-            else if (advantadgePlayer ==-1) score ="Advantage player2";
-            else if (advantadgePlayer>=2) score = "Win for player1";
+            int advantagePlayer = pointsPlayer1-pointsPlayer2;
+            if (advantagePlayer==1) score ="Advantage player1";
+            else if (advantagePlayer ==-1) score ="Advantage player2";
+            else if (advantagePlayer>=2) score = "Win for player1";
             else score ="Win for player2";
         }
         else
         {
             for (int i=1; i<3; i++)
             {
-                if (i==1) tempScore = pointsPlayer1;
-                else { score+="-"; tempScore = pointsPlayer2;}
-                switch(tempScore)
+                if (i==1) auxScore = pointsPlayer1;
+                else { score+="-"; auxScore = pointsPlayer2;}
+                switch(auxScore)
                 {
                     case 0:
                         score+="Love";
