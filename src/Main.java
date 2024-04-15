@@ -19,29 +19,35 @@ public class Main {
         }
         else
         {
-            for (int i=1; i<3; i++)
-            {
-                if (i==1) auxScore = pointsPlayer1;
-                else { score+="-"; auxScore = pointsPlayer2;}
-                switch(auxScore)
-                {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
-            }
+            score = drawPuntuation(pointsPlayer1, pointsPlayer2, score);
 
         }
     return score;
+    }
+
+    private static String drawPuntuation(int pointsPlayer1, int pointsPlayer2, String score) {
+        int auxScore;
+        for (int i = 1; i<3; i++)
+        {
+            if (i==1) auxScore = pointsPlayer1;
+            else { score +="-"; auxScore = pointsPlayer2;}
+            switch(auxScore)
+            {
+                case 0:
+                    score +="Love";
+                    break;
+                case 1:
+                    score +="Fifteen";
+                    break;
+                case 2:
+                    score +="Thirty";
+                    break;
+                case 3:
+                    score +="Forty";
+                    break;
+            }
+        }
+        return score;
     }
 
     private static String pointName(int pointsPlayer1) {
