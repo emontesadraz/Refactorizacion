@@ -29,10 +29,10 @@ public class Main {
         }
         else if (pointsPlayer1 >=4 || pointsPlayer2 >=4)
         {
-            int minusResult = pointsPlayer1-pointsPlayer2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
+            int advantadgePlayer = pointsPlayer1-pointsPlayer2;
+            if (advantadgePlayer==1) score ="Advantage player1";
+            else if (advantadgePlayer ==-1) score ="Advantage player2";
+            else if (advantadgePlayer>=2) score = "Win for player1";
             else score ="Win for player2";
         }
         else
