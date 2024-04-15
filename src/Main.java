@@ -1,6 +1,13 @@
+/**
+ * Esta es la main de la aplicación
+ */
 public class Main {
     /**
-     * metodo para devolver la puntuacion de tenis
+     * Este metodo calcula y devuelve la puntuacion de tenis de el jugador 1 y el jugador 2
+     *
+     * @param pointsPlayer1 La puntuación del primer jugador
+     * @param pointsPlayer2 La puntuacion del segundo jugador
+     * @return La puntuacion del juego como un String
      */
     public static String getScore(int pointsPlayer1, int pointsPlayer2) {
         String score = "";
@@ -25,6 +32,14 @@ public class Main {
     return score;
     }
 
+    /**
+     * Este metodo calcula y devuelve la puntuacion cuando los dos jugadores han empatado
+     *
+     * @param pointsPlayer1
+     * @param pointsPlayer2
+     * @param score
+     * @return La puntuacion del juego como un String
+     */
     private static String drawPuntuation(int pointsPlayer1, int pointsPlayer2, String score) {
         int auxScore;
         for (int i = 1; i<3; i++)
@@ -50,6 +65,12 @@ public class Main {
         return score;
     }
 
+    /**
+     * Este metodo recibe y devuelve la puntuacion de el jugador ganador
+     *
+     * @param pointsPlayer1
+     * @return La puntuacion del juego como un String
+     */
     private static String pointName(int pointsPlayer1) {
         String score;
         switch (pointsPlayer1)
