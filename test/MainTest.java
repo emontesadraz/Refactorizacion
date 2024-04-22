@@ -63,4 +63,30 @@ public class MainTest {
     public void playerOneScoresFortyPlayerTwoScoresThirty() {
         Assertions.assertEquals("Forty-Thirty", Main.getScore(3, 2));
     }
+    @Test
+    public void pointNameReturnsLoveAllWhenScoreIsZero() {
+        Assertions.assertEquals("Love-All", Main.pointName(0));
+    }
+
+    @Test
+    public void pointNameReturnsFifteenAllWhenScoreIsOne() {
+        Assertions.assertEquals("Fifteen-All", Main.pointName(1));
+    }
+
+    @Test
+    public void pointNameReturnsThirtyAllWhenScoreIsTwo() {
+        Assertions.assertEquals("Thirty-All", Main.pointName(2));
+    }
+
+    @Test
+    public void pointNameReturnsFortyAllWhenScoreIsThree() {
+        Assertions.assertEquals("Forty-All", Main.pointName(3));
+    }
+
+    @Test
+    public void pointNameReturnsDeuceWhenScoreIsFourOrMore() {
+        Assertions.assertEquals("Deuce", Main.pointName(4));
+        Assertions.assertEquals("Deuce", Main.pointName(5));
+        Assertions.assertEquals("Deuce", Main.pointName(6));
+    }
 }

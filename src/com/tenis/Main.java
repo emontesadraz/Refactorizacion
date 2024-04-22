@@ -39,7 +39,7 @@ public class Main {
      * @param pointsPlayer2 The score of the second player.
      * @return The game score as a String.
      */
-    private static String advantagePoints(int pointsPlayer1, int pointsPlayer2) {
+    public static String advantagePoints(int pointsPlayer1, int pointsPlayer2) {
         String score;
         int advantagePlayer = pointsPlayer1 - pointsPlayer2;
         // Check if player 1 has an advantage
@@ -94,7 +94,7 @@ public class Main {
      * @param pointsPlayer1 The score of the first player.
      * @return The game score as a String.
      */
-    private static String pointName(int pointsPlayer1) {
+    public static String pointName(int pointsPlayer1) {
         String [] score2 = {"Love-All", "Fifteen-All", "Thirty-All", "Forty-All", "Deuce"};
 
         String score;
