@@ -5,7 +5,7 @@ package com.tenis;
  */
 public class Main {
 
-    String[] scoreNames = {"Love", "Fifteen", "Thirty", "Forty"};
+
     String [] score2 = {"Love-All", "Fifteen-All", "Thirty-All", "Forty-All", "Deuce"};
     /**
      * This method calculates and returns the tennis score for player 1 and player 2.
@@ -65,6 +65,7 @@ public class Main {
      * @return The game score as a String.
      */
     private static String drawPuntuation(int pointsPlayer1, int pointsPlayer2, String score) {
+        String[] scoreNames = {"Love", "Fifteen", "Thirty", "Forty"};
         int auxScore;
         // Loop through the scores of both players
         for (int i = 1; i<3; i++)
@@ -75,15 +76,15 @@ public class Main {
             switch(auxScore)
             {
                 case 0:
-                    score += "Love";
+                    score += scoreNames[0];
                 case 1:
-                    score +="Fifteen";
+                    score +=scoreNames[1];
                     break;
                 case 2:
-                    score +="Thirty";
+                    score +=scoreNames[2];
                     break;
                 case 3:
-                    score +="Forty";
+                    score +=scoreNames[3];
                     break;
             }
         }
