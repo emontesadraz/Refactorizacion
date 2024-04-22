@@ -4,9 +4,6 @@ package com.tenis;
  * Main class for the tennis scoring application.
  */
 public class Main {
-
-
-    String [] score2 = {"Love-All", "Fifteen-All", "Thirty-All", "Forty-All", "Deuce"};
     /**
      * This method calculates and returns the tennis score for player 1 and player 2.
      *
@@ -98,24 +95,26 @@ public class Main {
      * @return The game score as a String.
      */
     private static String pointName(int pointsPlayer1) {
+        String [] score2 = {"Love-All", "Fifteen-All", "Thirty-All", "Forty-All", "Deuce"};
+
         String score;
         // Convert the numerical score to the corresponding tennis score
         switch (pointsPlayer1)
         {
             case 0:
-                score = "Love-All";
+                score = score2[0];
                 break;
             case 1:
-                score = "Fifteen-All";
+                score = score2[1];
                 break;
             case 2:
-                score = "Thirty-All";
+                score = score2[2];
                 break;
             case 3:
-                score = "Forty-All";
+                score = score2[3];
                 break;
             default:
-                score = "Deuce";
+                score = score2[4];
                 break;
 
         }
